@@ -30,6 +30,9 @@ function StartGame(){
 				$("#addedButtons").append(addButtonPoop);*/
 				
 			}
+			else{			
+				$( "#counter_poop").remove();
+				$( "#counter_horn").remove();}
 		}
 		else{
 			$( "#counter_poop").remove();
