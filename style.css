@@ -91,10 +91,14 @@ footer .navbar-brand{
 }
 
 .b-pos{
-	margin-bottom: 50%;
-	text-align-last: center;
+	margin-bottom: 30%;
+	text-align-last: center!important;
 }
-
+.overflowing{
+	/*overflow:hidden;*/
+	/*overflow-y:hidden;*/  /*для вертикального*/
+	overflow-x:hidden; 
+}
 .h_r{
 	color:black;
 }
