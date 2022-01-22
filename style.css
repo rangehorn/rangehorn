@@ -129,6 +129,10 @@ body{
 	    vertical-align: top!important;
 
 }
+.btn-block{
+	display: block;
+    width: 100%;
+}
 .border{
   border: 8px solid #666!important;
 }
