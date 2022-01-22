@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
    <head>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
@@ -10,14 +10,16 @@
 		background: linear-gradient(#1E90FF, #191970);		}
 		</style>
    </head>
-   <body>
+   <body class="overflowing">
       <main>
+		<nav class="sticky-top">
          <h1 class="position-relative p-3 m-md-3 text-center bg-light">
 		 <span id="counter_horn"></span>
 		 <img onclick="addHorn()" class="img-tittle" src="img/horn.png">
 			Range 
 		 <img onclick="addPoop()" class="img-tittle" src="img/poop.png">
 		 <span id="counter_poop"></span></h1>
+		</nav>
       </main>
 	  <body>
 		<h3 id='word3' class="text-center h_r"></h3>
@@ -26,7 +28,7 @@
 					<div class="talk-bubble tri-right round border left-top topic_style"><div class="talktext"><p> Сколько будет игроков?<br></p></div></div>
 				  </div>
 				  <div class="right-speach">
-					<div class="talk-bubble tri-right round border right-top topic_style"><div class="talktext"><p> Нас будет <input id ='counterpeople' type="text" size="1"><br> PS: Если не введешь цифру или же цифра больше 10, то будет бесконечное кол-во раундов&#128513;</p></div></div>
+					<div class="talk-bubble tri-right round border right-top topic_style"><div class="talktext"><p> Нас будет <input id ='counterpeople' type="text" size="2"><br> PS: Если не введешь цифру или же цифра больше 10, то будет бесконечное кол-во раундов&#128513;</p></div></div>
 				  </div>
 				</div>
 		      <button id="startGame" type="button" class="btn btn-lg btn-block btn-danger" >НАЧАТЬ ИГРУ</button>
