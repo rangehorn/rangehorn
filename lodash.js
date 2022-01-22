@@ -40,7 +40,7 @@ function StartGame(){
 		$( "#fullRules" ).remove();
 		$("#counterFriends").remove()
 		$("#word3").remove();
-		var nextButton = $('<div id="topic" class="text-center h_r"></div><div id ="nextButton" class="b-pos"><input type="button" id = "generateTopic" class="btn btn-lg btn-danger" onClick="generateTopic(dictTopic)" value="Следущая тема"/></div>');
+		var nextButton = $('<div id="topic" class="text-center h_r"></div><div id ="nextButton" class="b-pos"><input type="button" id = "generateTopic" class="btn btn-lg btn-danger btn-block" onClick="generateTopic(dictTopic)" value="Следущая тема"/></div>');
 		$("main").append(nextButton);
 		generateTopic(dictTopic);
 		$('html,body').scrollTop(0);
