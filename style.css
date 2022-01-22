@@ -97,7 +97,7 @@ footer .navbar-brand{
 .overflowing{
 	/*overflow:hidden;*/
 	/*overflow-y:hidden;*/  /*для вертикального*/
-	overflow-x:hidden; 
+	/*overflow-x:hidden;*/ 
 }
 .h_r{
 	color:black;
