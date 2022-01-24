@@ -25,12 +25,16 @@
 }
 .right-speach{
 	width:50%!important;
-	margin-left: auto;
+	margin-left: 45%;
+}
+.check_label{
+	min-width: 20px
 }
 .add_btn{
 	width:100%;
 	margin-top: 0.5rem;
 }
+
 .lead{
     margin-top: 16px;
 }
