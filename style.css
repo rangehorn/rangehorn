@@ -411,6 +411,9 @@ body{
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+      -webkit-perspective: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
 }
 
 .flip-card-front {
@@ -420,7 +423,7 @@ body{
 
 .flip-card-back {
   background-image: url('img/tittleback.jpg')!important;
-  color: back;
+  color: black;
   transform: rotateY(180deg);
 }
 
