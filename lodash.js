@@ -117,7 +117,7 @@ function finishPage(){
 		finish_text = 'Это полный провал! Вы же только разогривались?<div class="div-img-finish"><img class = "img-finish" src="img/think.png"></div>';
 	}
 	else if(counter_poop>counter_horn){
-		finish_text = 'Неплохо! Но вам стоит попробовать ещё: в следущий раз у вас точно получится!<div class="div-img-finish"><img class = "img-finish" src="img/drink.png"></div>';
+		finish_text = 'Неплохо! Но вам стоит попробовать ещё: в следующий раз у вас точно получится!<div class="div-img-finish"><img class = "img-finish" src="img/drink.png"></div>';
 	}
 	else if(counter_poop<=counter_horn&&counter_poop>0){
 		finish_text = 'Вы настоящие профессионалы!<div class="div-img-finish"><img class = "img-finish" src="img/drunk.png"></div>';
@@ -150,14 +150,14 @@ function generateTopic(dictTopic){
 					textFinishButton = 'Узнать результат!';
 				}
 				else{
-					textFinishButton = 'Следущий раунд!';
+					textFinishButton = 'Следующий раунд!';
 				}
 				var nextButton = $('<div id="topic" class="text-center h_r"></div><div id ="nextButton" class="b-pos"><input type="button" id = "generateTopic" class="btn btn-lg btn-danger btn-block" onClick="genPageNum()" value="'+textFinishButton+'"/></div>');
 				list_num = rollNumber([1,2,3,4,5,6,7,8,9,10]);
 				cur_player = 0;
 			}
 			else{
-				var nextButton = $('<div id="topic" class="text-center h_r"></div><div id ="nextButton" class="b-pos"><input type="button" id = "generateTopic" class="btn btn-lg btn-danger btn-block" onClick="generateTopic(dictTopic)" value="Следущая тема!"/></div>');
+				var nextButton = $('<div id="topic" class="text-center h_r"></div><div id ="nextButton" class="b-pos"><input type="button" id = "generateTopic" class="btn btn-lg btn-danger btn-block" onClick="generateTopic(dictTopic)" value="Следующий раунд!"/></div>');
 			}
 			$("main").append(nextButton);
 			var speachRight = "talk-bubble tri-right round border right-top";
