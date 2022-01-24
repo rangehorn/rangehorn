@@ -102,6 +102,7 @@ function genPageNum(){
 			$("main").append(sNumberPage);
 		}
 	}
+	$('html,body').scrollTop(0);
 }
 	
 function rollNumber(list_num){
@@ -144,7 +145,14 @@ function generateTopic(dictTopic){
 			clearPage();
 			$("#topic").remove();
 			if(needGen){
-				var nextButton = $('<div id="topic" class="text-center h_r"></div><div id ="nextButton" class="b-pos"><input type="button" id = "generateTopic" class="btn btn-lg btn-danger btn-block" onClick="genPageNum()" value="Передай следущему капитану!"/></div>');
+				let textFinishButton = "";
+				if(round_counter==1){
+					textFinishButton = 'Узнать результат!';
+				}
+				else{
+					textFinishButton = 'Следущий раунд!';
+				}
+				var nextButton = $('<div id="topic" class="text-center h_r"></div><div id ="nextButton" class="b-pos"><input type="button" id = "generateTopic" class="btn btn-lg btn-danger btn-block" onClick="genPageNum()" value="'+textFinishButton+'"/></div>');
 				list_num = rollNumber([1,2,3,4,5,6,7,8,9,10]);
 				cur_player = 0;
 			}
