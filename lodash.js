@@ -71,7 +71,7 @@ function StartGame(){
 
 function genPageNum(){
 	clearPage();
-	sCardPage = '<div id = "flip-card" class="flip-card" onClick="flipCard()"><div class="flip-card-inner"><div class="flip-card-front"><img src="img/tittle2.jpg" alt="Avatar" style=""></div><div class="flip-card-back newfont"></br><h2>Запомни цифру!</h2></br></br><div class="size-num">'+list_num.pop()+'</div></div></div></div>';
+	sCardPage = '<div id = "flip-card" class="flip-card" onClick="flipCard()"><div class="flip-card-inner"><div class="flip-card-front"><img src="img/tittle3.jpg" alt="Avatar" style=""></div><div class="flip-card-back newfont"></br><h2>Запомни цифру!</h2></br></br><div class="size-num">'+list_num.pop()+'</div></div></div></div>';
 	if(round_counter==0||(counter_horn<=0&&round_counter!=-1)){
 			finishPage();
 	}
