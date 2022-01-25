@@ -126,7 +126,7 @@ function finishPage(){
 		finish_text = 'Чемпионы! Вы закончили игру с идеальным счётом! Попробуйте экспертный вариант!<div class="div-img-finish"><img class = "img-finish" src="img/win.png"></div>'
 	}
 	$("#nextButton").remove();
-	$("#topic").append('<div class="talk-bubble tri-right round border left-top topic_style"><div class="talktext"><p>' + finish_text+ "<br></p></div></div>");
+	$("#topic").append('<div class="talk-bubble-left tri-right round border left-top topic_style"><div class="talktext"><p>' + finish_text+ "<br></p></div></div>");
 	let newPage =  '<button id="fullRules" onclick="window.location.href=\'index.html\'" type="button" class="btn btn-lg btn-block btn-danger b-pos add_btn">Давай по новой!</button>'
 	$("main").append(newPage);
 	$("#poop_img").attr("onclick", "");
@@ -161,8 +161,8 @@ function generateTopic(dictTopic){
 				var nextButton = $('<div id="topic" class="text-center h_r"></div><div id ="nextButton" class="b-pos"><input type="button" id = "generateTopic" class="btn btn-lg btn-danger" onClick="generateTopic(dictTopic)" value="'+textFinishButton+'"/></div>');
 			}
 			$("main").append(nextButton);
-			var speachRight = "talk-bubble tri-right round border right-top";
-			var speachLeft = "talk-bubble tri-right round border left-top";
+			var speachRight = "talk-bubble-right tri-right round border right-top";
+			var speachLeft = "talk-bubble-left tri-right round border left-top";
 			bugtrack = [];
 			for (i = 0; i < 4; i++) {
 				if(dictTopic.length>0)
@@ -211,7 +211,7 @@ function flipCard(){
 };
 
 function ShowShortRules(){
-	let speachLeft = "talk-bubble tri-right round border left-top topic_style";
+	let speachLeft = "talk-bubble-left tri-right round border left-top topic_style";
 	let textRules = 'Игра продолжается столько раундов, сколько игроков. В каждом новом раунде меняется капитан по кругу. Капитан получает случайным образом 4 темы. Затем всем игрокам выдаётся по специальной карте, которая известна только им. Карта содержит номер от 1 до 10. Капитан выбирает и озвучивает одну тему и первым дает ответ, в соответсвие с цифрой на своей карточке и далее по очереди отвечают все остальные. </br></br><span class="redtext">К примеру</span>, тема этого раунда кличка для собаки, нужно придумать от наименее до наиболее страшной. Лесси явно будет милой собачкой, в отличие от Убийцы почтальнонов. <span class="greentext">Главная задача</span> игроков придумать ответ таким образом, чтобы капитан смог в конце раунда распределить ответы от меньшей цифры к большей. А в случае ошибки, ваши жетоны из победной зоны единорогов будут перемещаться в зону какашек. И как только зона единорога опустеет, вы проиграли.</br><img  class = "rules-img" src="img/rules.png">'
 	$( "#startGame" ).remove();
 	$( "#showShortRules" ).remove();
