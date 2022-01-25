@@ -32,7 +32,7 @@
 }
 .add_btn{
 	width:100%;
-	margin-top: 0.5rem;
+	margin-top: 0.5rem!important;
 }
 
 .lead{
@@ -95,7 +95,7 @@ footer .navbar-brand{
 }
 
 .b-pos{
-	margin-bottom: 30%;
+	margin: auto;
 	text-align-last: center!important;
 }
 .overflowing{
@@ -109,6 +109,7 @@ footer .navbar-brand{
 
 /* General CSS Setup */
 body{
+	padding-bottom: 55px;
   background-color: lightblue;
   font-family:"San Francisco";
   /*font-family: "Ubuntu-Italic", "Lucida Sans", helvetica, sans;*/
