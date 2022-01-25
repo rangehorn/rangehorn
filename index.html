@@ -21,7 +21,7 @@
 		 <span id="counter_poop"></span></h1>
 		</nav>
       </main>
-	  <body>
+	  <body2>
 		<h3 id='word3' class="text-center h_r"></h3>
 			  <div id = "counterFriends">
 				  <div class="left-speach">
@@ -30,25 +30,27 @@
 				  <div class="right-speach">
 					<div class="talk-bubble tri-right round border right-top topic_style">
 						<div class="talktext"><p> Нас будет 
-							<input id ='counterpeople' onkeyup="disableCheck('inlineCheckbox1', this)" oninput="this.value=this.value.replace(/[^0-9]/g,'');" type="text" size="2">.<br> PS: Если не введешь цифру или же цифра больше 10, то будет бесконечное кол-во раундов&#128513;</p>				  	
+							<input id ='counterpeople' onkeyup="disableCheck('inlineCheckbox1', this)" oninput="this.value=this.value.replace(/[^0-9]/g,'');" type="text" size="2">.<br> PS: Если не введешь цифру или же цифра больше 10, то будет бесконечное кол-во раундов!
+							</p>				  	
 							<div class="form-check form-check-inline">
 								<input class="form-check-input check_label" type="checkbox" id="inlineCheckbox1" value="option1" disabled>
-								<label class="form-check-label check_label" for="inlineCheckbox1">Сгенерить случайное число каждому игроку</label>
+								<label class="form-check-label check_label" for="inlineCheckbox1">Если хочешь, чтобы каждому игроку было сгенерировано случайное число, поставь галочку!</label>
 							</div>
 						</div>
 					</div>
 				  </div>
 				</div>
-		      <button id="startGame" type="button" class="btn btn-lg btn-block btn-danger" >Начать игру</button>
+		     <!-- <button id="startGame" type="button" class="btn btn-lg btn-block btn-danger" >Начать игру</button>-->
+			  <input type="button" id = "startGame" class="btn btn-lg btn-danger add_btn" onClick="startGame()" value="Начать игру"/>
 			  <input type="button" id = "showShortRules" class="btn btn-lg btn-danger add_btn" onClick="ShowShortRules()" value="Правила (коротко)"/>
 			  <button id="fullRules" onclick="window.location.href='range.pdf';" type="button" class="btn btn-lg btn-block btn-danger b-pos add_btn">Полные правила в PDF</button>
-	  </body>
-      <footer class="p-md-3 bg-dark navbar-dark text-center fixed-bottom">
+	  </body2>
+
+   </body>
+         <footer class="p-md-3 bg-dark navbar-dark text-center fixed-bottom">
          <div class="navbar-brand bd-footer ">Created by Fix. Moscow 2022</div>
       </footer>
-	  	  
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
 	  <script src="lodash.js"></script>
-   </body>
