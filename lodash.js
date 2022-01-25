@@ -93,12 +93,12 @@ function genPageNum(){
 		}
 		if(cur_player>=num_players){
 			textButton = "Запомнил? Нажми и передай Капитану!";
-			var nextButton = $('<div id="topic" class="text-center h_r">'+sCardPage+'</div><div id ="nextButton" class=""><input type="button" id = "generateTopic" class="btn btn-lg btn-danger btn-block" onClick="generateTopic(dictTopic)" value="'+textButton+'"/></div>');
+			var nextButton = $('<div id="topic" class="text-center h_r">'+sCardPage+'</div><div id ="nextButton" class="b-pos"><input type="button" id = "generateTopic" class="btn btn-lg btn-danger" onClick="generateTopic(dictTopic)" value="'+textButton+'"/></div>');
 			$("main").append(nextButton);
 		}
 		else{
 			textButton = "Запомнил? Нажми и передай игроку "+(cur_player+1)+"!";
-			var sNumberPage = $('<div id="topic" class="text-center h_r">'+sCardPage+'</div><div id ="genNum" class=""><input type="button" id = "genPageNum" class="btn btn-lg btn-danger btn-block" onClick="genPageNum()" value="'+textButton+'"/></div>');
+			var sNumberPage = $('<div id="topic" class="text-center h_r">'+sCardPage+'</div><div id ="genNum" class="b-pos"><input type="button" id = "genPageNum" class="btn btn-lg btn-danger" onClick="genPageNum()" value="'+textButton+'"/></div>');
 			$("main").append(sNumberPage);
 		}
 	}
@@ -127,7 +127,7 @@ function finishPage(){
 	}
 	$("#nextButton").remove();
 	$("#topic").append('<div class="talk-bubble-left tri-right round border left-top topic_style"><div class="talktext"><p>' + finish_text+ "<br></p></div></div>");
-	let newPage =  '<button id="fullRules" onclick="window.location.href=\'index.html\'" type="button" class="btn btn-lg btn-block btn-danger b-pos add_btn">Давай по новой!</button>'
+	let newPage =  '<button id="fullRules" onclick="window.location.href=\'index.html\'" type="button" class="btn btn-lg btn-danger b-pos add_btn">Давай по новой!</button>'
 	$("main").append(newPage);
 	$("#poop_img").attr("onclick", "");
 	$("#horn_img").attr("onclick", "");
