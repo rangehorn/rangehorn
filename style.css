@@ -5,6 +5,7 @@
 .navbar{
     position: sticky;
 }
+
 .text-center{
     margin-right: auto;
     margin-left: auto;
@@ -24,8 +25,8 @@
 	width:50%!important;
 }
 .right-speach{
-	width:50%!important;
-	margin-left: 45%;
+	/*width:50%!important;*/
+	/*margin-left: 45%;*/
 }
 .check_label{
 	min-width: 20px
@@ -123,8 +124,20 @@ body{
 	width: 100%;
 }
 /* CSS talk bubble */
-.talk-bubble {
+.talk-bubble-left {
   margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  display: inline-block;
+  position: relative;
+	width: 200px;
+	height: auto;
+	background-color: lightyellow;
+	    vertical-align: top!important;
+
+}
+.talk-bubble-right {
+	float: right;
   margin-right: 40px;
   margin-bottom: 20px;
   display: inline-block;
