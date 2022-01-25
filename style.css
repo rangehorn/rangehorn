@@ -98,6 +98,7 @@ footer .navbar-brand{
 .b-pos{
 	margin: auto;
 	text-align-last: center!important;
+	text-align: -webkit-center!important;
 }
 .overflowing{
 	/*overflow:hidden;*/
