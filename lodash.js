@@ -1,6 +1,6 @@
 
 	$('#startGame').click(function(){
-       StartGame();
+       startGame();
 	});
 //	$('#topic').click(function(){
  //      generateTopic();
@@ -27,7 +27,7 @@ function clearPage(){
 		$("#nextButton").remove();
 }
 		
-function StartGame(){	
+function startGame(){	
 		num_players = Number($("#counterpeople").val());
 		needGen = $("#inlineCheckbox1")[0].checked;
 		if(num_players)
@@ -93,12 +93,12 @@ function genPageNum(){
 		}
 		if(cur_player>=num_players){
 			textButton = "Запомнил? Нажми и передай Капитану!";
-			var nextButton = $('<div id="topic" class="text-center h_r">'+sCardPage+'</div><div id ="nextButton" class="b-pos"><input type="button" id = "generateTopic" class="btn btn-lg btn-danger btn-block" onClick="generateTopic(dictTopic)" value="'+textButton+'"/></div>');
+			var nextButton = $('<div id="topic" class="text-center h_r">'+sCardPage+'</div><div id ="nextButton" class=""><input type="button" id = "generateTopic" class="btn btn-lg btn-danger btn-block" onClick="generateTopic(dictTopic)" value="'+textButton+'"/></div>');
 			$("main").append(nextButton);
 		}
 		else{
 			textButton = "Запомнил? Нажми и передай игроку "+(cur_player+1)+"!";
-			var sNumberPage = $('<div id="topic" class="text-center h_r">'+sCardPage+'</div><div id ="genNum" class="b-pos"><input type="button" id = "genPageNum" class="btn btn-lg btn-danger btn-block" onClick="genPageNum()" value="'+textButton+'"/></div>');
+			var sNumberPage = $('<div id="topic" class="text-center h_r">'+sCardPage+'</div><div id ="genNum" class=""><input type="button" id = "genPageNum" class="btn btn-lg btn-danger btn-block" onClick="genPageNum()" value="'+textButton+'"/></div>');
 			$("main").append(sNumberPage);
 		}
 	}
@@ -144,20 +144,21 @@ function generateTopic(dictTopic){
 			}
 			clearPage();
 			$("#topic").remove();
+			let textFinishButton = "";
+			if(round_counter==1){
+				textFinishButton = 'Узнать результат!';
+			}
+			else{
+				textFinishButton = 'Следующий раунд!';
+			}
 			if(needGen){
-				let textFinishButton = "";
-				if(round_counter==1){
-					textFinishButton = 'Узнать результат!';
-				}
-				else{
-					textFinishButton = 'Следующий раунд!';
-				}
-				var nextButton = $('<div id="topic" class="text-center h_r"></div><div id ="nextButton" class="b-pos"><input type="button" id = "generateTopic" class="btn btn-lg btn-danger btn-block" onClick="genPageNum()" value="'+textFinishButton+'"/></div>');
+
+				var nextButton = $('<div id="topic" class="text-center h_r"></div><div id ="nextButton" class="b-pos"><input type="button" id = "generateTopic" class="btn btn-lg btn-danger" onClick="genPageNum()" value="'+textFinishButton+'"/></div>');
 				list_num = rollNumber([1,2,3,4,5,6,7,8,9,10]);
 				cur_player = 0;
 			}
 			else{
-				var nextButton = $('<div id="topic" class="text-center h_r"></div><div id ="nextButton" class="b-pos"><input type="button" id = "generateTopic" class="btn btn-lg btn-danger btn-block" onClick="generateTopic(dictTopic)" value="Следующий раунд!"/></div>');
+				var nextButton = $('<div id="topic" class="text-center h_r"></div><div id ="nextButton" class="b-pos"><input type="button" id = "generateTopic" class="btn btn-lg btn-danger" onClick="generateTopic(dictTopic)" value="'+textFinishButton+'"/></div>');
 			}
 			$("main").append(nextButton);
 			var speachRight = "talk-bubble tri-right round border right-top";
@@ -217,7 +218,7 @@ function ShowShortRules(){
 	$( "#fullRules" ).remove();
 	$("#counterFriends").remove()
 	$("#word3").empty();
-	let newPage =  '<button id="fullRules" onclick="window.location.href=\'index.html\'" type="button" class="btn btn-lg btn-block btn-danger b-pos add_btn">Назад!</button>';
+	let newPage =  '<button id="fullRules" onclick="window.location.href=\'index.html\'" type="button" class="btn btn-lg btn-danger b-pos add_btn">Назад!</button>';
 	$("body").append(newPage);
 	$("#word3").append('<div class="'+speachLeft+'"><div class="talktext"><p>' + textRules+ "<br></p></div></div>");
 
