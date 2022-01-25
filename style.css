@@ -127,7 +127,7 @@ body{
 /* CSS talk bubble */
 .talk-bubble-left {
   margin-left: 40px;
-  margin-right: 40px;
+/*  margin-right: 40px;*/
   margin-bottom: 20px;
   display: inline-block;
   position: relative;
