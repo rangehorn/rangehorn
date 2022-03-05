@@ -208,6 +208,7 @@ function addHorn(){
 		
 function flipCard(){
 	$("#flip-card").toggleClass('hover');
+	$("#flip-card").prop("onclick",null);
 };
 
 function ShowShortRules(){
