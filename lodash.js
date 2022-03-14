@@ -228,9 +228,10 @@ function ShowShortRules(){
 };
 
 function disableCheck(commen, e){
-    if(e.value.length > 0){
+    if(e.value.length > 0 && e.value <= 10){
         document.getElementById(commen).disabled=false;
     }else{
         document.getElementById(commen).disabled=true;
     }
  };
+
